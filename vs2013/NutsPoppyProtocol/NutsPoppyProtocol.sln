@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "APrivateProtocol", "APrivateProtocol.vcxproj", "{D710A549-B6FA-467D-BC53-8514997FC99F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libprotobuf", "..\..\..\..\Backup\protobuf-2.5.0\vsprojects\libprotobuf.vcxproj", "{3E283F37-A4ED-41B7-A3E6-A2D89D131A30}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "APPServer", "..\..\..\..\Test\ZMQServer\vs2008\Test.vcxproj", "{D36428F9-C38E-42AD-BE74-C830DB2D88BB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZMQClient", "..\..\..\..\Test\ZMQClient\vs2008\ZMQClient.vcxproj", "{081A4930-B770-4467-B96B-88537D01628E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D710A549-B6FA-467D-BC53-8514997FC99F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D710A549-B6FA-467D-BC53-8514997FC99F}.Debug|Win32.Build.0 = Debug|Win32
+		{D710A549-B6FA-467D-BC53-8514997FC99F}.Release|Win32.ActiveCfg = Release|Win32
+		{D710A549-B6FA-467D-BC53-8514997FC99F}.Release|Win32.Build.0 = Release|Win32
+		{3E283F37-A4ED-41B7-A3E6-A2D89D131A30}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3E283F37-A4ED-41B7-A3E6-A2D89D131A30}.Debug|Win32.Build.0 = Debug|Win32
+		{3E283F37-A4ED-41B7-A3E6-A2D89D131A30}.Release|Win32.ActiveCfg = Release|Win32
+		{3E283F37-A4ED-41B7-A3E6-A2D89D131A30}.Release|Win32.Build.0 = Release|Win32
+		{D36428F9-C38E-42AD-BE74-C830DB2D88BB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D36428F9-C38E-42AD-BE74-C830DB2D88BB}.Debug|Win32.Build.0 = Debug|Win32
+		{D36428F9-C38E-42AD-BE74-C830DB2D88BB}.Release|Win32.ActiveCfg = Release|Win32
+		{D36428F9-C38E-42AD-BE74-C830DB2D88BB}.Release|Win32.Build.0 = Release|Win32
+		{081A4930-B770-4467-B96B-88537D01628E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{081A4930-B770-4467-B96B-88537D01628E}.Debug|Win32.Build.0 = Debug|Win32
+		{081A4930-B770-4467-B96B-88537D01628E}.Release|Win32.ActiveCfg = Release|Win32
+		{081A4930-B770-4467-B96B-88537D01628E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

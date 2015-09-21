@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\IoOverlappedBufPool.cpp" />
+    <ClCompile Include="..\..\src\IoOverlappedManager.cpp" />
+    <ClCompile Include="..\..\src\IoSession.cpp" />
+    <ClCompile Include="..\..\src\IoSessionMgr.cpp" />
+    <ClCompile Include="..\..\src\MemPool\CMemoryPool.cpp" />
+    <ClCompile Include="..\..\src\MessageCallbackMgr.cpp" />
+    <ClCompile Include="..\..\src\npp.cpp" />
+    <ClCompile Include="..\..\src\SockEnv.cpp" />
+    <ClCompile Include="..\..\src\NppMessageTimerQueue.cpp" />
+    <ClCompile Include="..\..\src\NppThread.cpp" />
+    <ClCompile Include="..\..\src\NppThreadPool.cpp" />
+    <ClCompile Include="..\..\src\NutsWrapperMessage.pb.cc" />
+    <ClCompile Include="..\..\src\WinAysncIOCP.cpp" />
+    <ClCompile Include="..\..\src\NppMessageFactory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\IoOverlappedBufPool.h" />
+    <ClInclude Include="..\..\src\Configure.h" />
+    <ClInclude Include="..\..\src\DefaultEncodeWrapper.h" />
+    <ClInclude Include="..\..\src\defaultMessageParse.h" />
+    <ClInclude Include="..\..\src\IoOverlappedManager.h" />
+    <ClInclude Include="..\..\src\IoOverlappedPlus.h" />
+    <ClInclude Include="..\..\src\IoSession.h" />
+    <ClInclude Include="..\..\src\MemPool\CMemoryPool.h" />
+    <ClInclude Include="..\..\src\MemPool\IMemoryBlock.h" />
+    <ClInclude Include="..\..\src\MemPool\SMemoryChunk.h" />
+    <ClInclude Include="..\..\src\NppAcceptor.cpp" />
+    <ClInclude Include="..\..\src\npp.h" />
+    <ClInclude Include="..\..\src\NppConnector.cpp" />
+    <ClInclude Include="..\..\src\IoSessionMgr.h" />
+    <ClInclude Include="..\..\src\MessageCallbackMgr.h" />
+    <ClInclude Include="..\..\src\SockEnv.h" />
+    <ClInclude Include="..\..\src\NppDumpSupport.h" />
+    <ClInclude Include="..\..\src\NppLog.h" />
+    <ClInclude Include="..\..\src\NppThread.h" />
+    <ClInclude Include="..\..\src\NppMessageTimerQueue.h" />
+    <ClInclude Include="..\..\src\NutsWrapperMessage.pb.h" />
+    <ClInclude Include="..\..\src\TBBThreadPool.h" />
+    <ClInclude Include="..\..\src\NppThreadPool.h" />
+    <ClInclude Include="..\..\src\WinAysncIOCP.h" />
+    <ClInclude Include="..\..\src\NppMessageFactory.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D710A549-B6FA-467D-BC53-8514997FC99F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Alog</RootNamespace>
+    <ProjectName>Npp</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\..\bin\release\</OutDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;ALOG_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\include\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\lib\release</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NPP_EXPORTS;__WINDOWS__;_X86_;ACE_AS_STATIC_LIBS;ZLIB_WINAPI;ASMV;ASMINF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\..\public\include\;..\..\..\..\Backup\ACE_wrappers;..\..\..\..\public\protobuf;..\..\..\..\public\include\tbb;D:\WinDDK\7600.16385.1\inc;D:\WinDDK\7600.16385.1\inc\ddk</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\lib\release</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libprotobuf.lib;alog.lib;zlibstat.lib;ws2_32.lib;ace_static.lib;libtcmalloc_minimal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ForceSymbolReferences>
+      </ForceSymbolReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /y ..\..\..\bin\release\npp.lib ..\..\..\lib\release
+copy /y ..\..\..\bin\release\npp.lib ..\..\..\..\Test\ZMQServer\bin\Release
+copy /y ..\..\..\bin\release\npp.lib ..\..\..\..\Test\ZMQClient\bin\Release
+copy /y ..\..\src\npp.h ..\..\..\include
+
+copy /y ..\..\..\bin\release\npp.dll ..\..\..\..\Test\ZMQServer\bin\Release
+copy /y ..\..\..\bin\release\npp.pdb ..\..\..\..\Test\ZMQServer\bin\Release
+copy /y ..\..\..\bin\release\npp.dll ..\..\..\..\Test\ZMQClient\bin\Release
+copy /y ..\..\..\bin\release\npp.pdb ..\..\..\..\Test\ZMQClient\bin\Release</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
